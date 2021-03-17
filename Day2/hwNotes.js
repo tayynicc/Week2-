@@ -234,9 +234,11 @@ undefined
 //Dot notation:
 
     //easier to read
-    //easier to write because we don't have to deal with using quotation marks
+    //easier to write because we don't have to deal with using quotation
+            // marks
     //cannot use variables as keys
-    //keys can't contain numbers as their first character (object.1key doesn't work!)
+    //keys can't contain numbers as their first character
+            //(object.1key doesn't work!)
 
 // Bracket notation:
 
