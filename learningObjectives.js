@@ -60,7 +60,7 @@
     // }
 
 
-3.Use the obj[key] !== undefined pattern to check if a given variable that contains a key exists in an object
+//3.Use the obj[key] !== undefined pattern to check if a given variable that contains a key exists in an object
 // first what is obj[key] !== undefined saying?
     //if key is in object is not eaqual to undefined then that
     // key value can be found in the object
@@ -173,22 +173,51 @@ let obj2 = {
 
 4.Utilize Object.keys and Object.values in a function
 
+// object.keys iterates throuhgt the object and grabs the keys
 
+let obj2 = {
+  name : "Dillon",
+  age: 18,
+  height: 6,
+  eyeColor: "blue",
+}
 
+let objKeyz = function (){
+  return Object.keys(obj2);
+  console.log(Object.values(obj2));
+}
+
+console.log(objKeyz(obj)); // prints ['name', 'age', 'height', 'eyeColor']
+objKeyz(obj2) // prints "Dillon" , 18 , 6 , "blue"
 
 
 5.Iterate through an object using a for...in loop
+//for...in itterates ocer all enumerater properties of an object that are keyed by stings.
 
+// for (variable in object){
+//  statement
+//}
 
+//variable
+//A different property name is assigned to variable on each iteration.
+//object
+//Object whose non-Symbol enumerable properties are iterated over.
 
+//Objects created from built–in constructors like Array and Object have inherited non–enumerable
+//properties from Object.prototype and String.prototype
 
-
-
+// for in loop does not gaurentee that the indexes are itterated over in order
 6.Define a function that utilizes ...rest syntax to accept an arbitrary number of arguments
 
+  function restFunc(...allOtherEle){
+    let sum = 0;
+    allOtherEle += sum;
+    return sum;
+  }
 
-
-
+  console.log(restFunc(2,3,4,5)); //
+  console.log(restFunc(3,3)); //
+  console.log(restFunc(5,6,7,8,9)); //
 
 7.Use ...spread syntax for Object literals and Array literals
 
@@ -200,15 +229,51 @@ let obj2 = {
 8.Destructure an array to reference specific elements
 
 
+let array = [ ' robot' , ' eletronices', ' iphone' , 'computer'];
+
+let [machine, parts, product, tool] = array
+
+console.log(machine); // robot
+console.log(tools); // computer
+console.log(helper); // undefined
+
 
 
 
 9.Destructure an object to reference specific values
 
+// to refrence specific values you cn use dot notation or backet notation.
 
+let human = { name: "Jim" , city: "Scranton", job: "Co-Regional Manager"};
+let name, city, job;
 
+({name, city, job} = human);
 
+console.log(job); // Co-Regional Manager
+console.log(city); // Scranton
+console.log(name); // Jim
 
+let employeeNum2 = {name:"Dwight" , location:"classified", milkPrefrence:"Goat"};
+let name, location, milkPrefrence;
+({name, location, milkPrefrence});
+
+console.log(location); // classified
+console.log(birthday); // undefined
+console.log(milkPrefrence); // Goat
+
+/////////give a new variable name in an object
+
+let person = {name:"Creed Bratton", job:"Qual...que..Quaibadie-ashwhitz", status:"WANTED"}
+
+let {name:alise, job:cover, status} = person;
+
+console.log(alise); // Creed Bratton
+console.log(cover); // Qual...que..Quaibadie-ashwhitz
+console.log(status); // WANTED
+console.log(age); // undefined
+
+//Swapping Values using the Destructuring Assignment
+//One more thing. We can use the destructuring assignment to swap the values of variables:
 10.Write a function that accepts an array as an argument and returns an object representing the count of each character in the array
 
 
@@ -236,25 +301,78 @@ let obj2 = {
 
 ////////////////////////Objects/////////////////////////////
 19.Label variables as either Primitive vs. Reference.
+
 20.Identify when to use dot notation (.) vs. bracket notation ([]) when accessing values of an object.
+
 21.Use the obj[key] !== undefined pattern to check if a given variable that contains a key exists in an object.
+
 22.Utilize Object.keys and Object.values in a function.
+
 23.Iterate through an object using a for...in loop.
+
 24.Define a function that utilizes ...rest syntax to accept an arbitrary number of arguments.
+
 25.Use ...spread syntax for Object literals and Array literals.
+
 26.Destructure an array to reference specific elements.
+
 27.Destructure an object to reference specific values.
+
 28.Write a function that accepts an array as an argument and returns an object representing the count of each character in the array.
 //////////////////////////Callbacks////////////////////////////
 29.Given multiple plausible reasons, identify why functions are called “First Class Objects” in JavaScript.
+
+//they can be stored in a variable, an object, or an array
+//they can be also be pased as an argument into a function
+//functions can be returned from functions
+
+
+
 30.Given a code snippet containing an anonymous callback, a named callback, and multiple console.logs, predict what will be printed.
+
+
+
+
 31.Write a function that takes in a value and two callbacks. The function should return the result of the callback that is greater.
+
+
+
+
+
 32.Write a function, myMap, that takes in an array and a callback as arguments. The function should mimic the behavior of Array.map.
+
+
+
+
 33.Write a function, myFilter, that takes in an array and a callback as arguments. The function should mimic the behavior of Array.filter.
+
+
+
+
+
 34.Write a function, myEvery, that takes in an array and a callback as arguments. The function should mimic the behavior of Array.every.
 Scope
+
+
+
+
 35.Identify the difference between const, let, and var declarations.
+
+
+
+
 36.Explain the difference between const, let, and var declarations.
 37.Predict the evaluation of code that utilizes function scope, block scope, lexical scope, and scope chaining.
 38.Define an arrow function.
 39.Implement a closure and explain how the closure effects scope.
+////////////////////Scope//////////////////////////////////////
+40.Identify the difference between const, let, and var declarations
+41.Explain the difference between const, let, and var declarations
+42.Predict the evaluation of code that utilizes function scope, block scope, lexical scope, and scope chaining
+43.Define an arrow function
+44.Implement a closure and explain how the closure effects scope
+////////////////////////variables////////////////////////////////
+45.Identify the three keywords used to declare a variable in JavaScript
+46.Explain the differences between const, let and var
+47.Identify the difference between function and block-scoped variables
+48.Paraphrase the concept of hoisting in regards to function and block-scoped variables
